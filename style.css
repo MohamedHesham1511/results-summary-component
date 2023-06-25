@@ -94,7 +94,7 @@ p {
 }
 
 .summary-component {
-  width: 70%;
+  width: 50%;
 }
 
 .score-summary {
@@ -127,6 +127,18 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1234px) {
+  .summary-component {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .summary-component {
+    width: 70%;
+  }
 }
 
 @media (max-width: 900px) {
