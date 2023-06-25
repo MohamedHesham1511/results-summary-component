@@ -1,0 +1,154 @@
+:root {
+  --bs-light-red: hsl(0, 100%, 67%);
+  --bs-orangey-yellow: hsl(39, 100%, 56%);
+  --bs-green-teal: hsl(166, 100%, 37%);
+  --bs-cobalt-blue: hsl(234, 85%, 45%);
+
+  --bg-light-red: hsl(0, 100%, 95%);
+  --bg-orangey-yellow: hsl(39, 100%, 95%);
+  --bg-green-teal: hsl(166, 100%, 95%);
+  --bg-cobalt-blue: hsl(234, 85%, 95%);
+}
+
+.color-light-red {
+  color: var(--bs-light-red);
+}
+.color-orangey-yellow {
+  color: var(--bs-orangey-yellow);
+}
+.color-green-teal {
+  color: var(--bs-green-teal);
+}
+.color-cobalt-blue {
+  color: var(--bs-cobalt-blue);
+}
+
+.bg-light-red {
+  background-color: var(--bg-light-red);
+}
+.bg-orangey-yellow {
+  background-color: var(--bg-orangey-yellow);
+}
+.bg-green-teal {
+  background-color: var(--bg-green-teal);
+}
+.bg-cobalt-blue {
+  background-color: var(--bg-cobalt-blue);
+}
+
+.action-button {
+  background-color: hsl(224, 30%, 27%);
+}
+
+.action-button:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf')
+    format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 18px;
+}
+
+.summary-component {
+  width: 70%;
+}
+
+.score-summary {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+
+.score-circle {
+  width: 13rem;
+  height: 13rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+}
+
+.total-score {
+  font-size: 5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 900px) {
+  .score-circle {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .summary-component {
+    width: 80%;
+    margin-top: 16rem;
+  }
+
+  .score-circle {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .summary-component {
+    width: 100%;
+  }
+}
