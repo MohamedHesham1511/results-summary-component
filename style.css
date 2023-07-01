@@ -1,3 +1,46 @@
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf')
+    format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+}
+
 :root {
   --bs-light-red: hsl(0, 100%, 67%);
   --bs-orangey-yellow: hsl(39, 100%, 56%);
@@ -39,62 +82,12 @@
 .action-button {
   background-color: hsl(224, 30%, 27%);
 }
-
 .action-button:hover {
   background: linear-gradient(
     to bottom,
     hsl(252, 100%, 67%),
     hsl(241, 81%, 54%)
   );
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  src: url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  src: url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf')
-    format('truetype');
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  src: url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf')
-    format('truetype');
-  font-weight: normal;
-}
-
-body {
-  font-family: 'Hanken Grotesk', sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-weight: bold;
-}
-
-p {
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-size: 18px;
-}
-
-.summary-component {
-  width: 50%;
 }
 
 .score-summary {
@@ -122,45 +115,50 @@ p {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.75rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  font-weight: bold;
+}
+.attribution a:hover {
+  color: hsl(7, 68%, 52%);
 }
 
-@media (max-width: 1234px) {
-  .summary-component {
+@media (max-width: 767px) {
+  .score-circle {
+    width: 10rem;
+    height: 10rem;
+    margin-top: 1rem;
+  }
+  .score-component {
+    margin-top: 22rem;
+  }
+  .score-summary {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    width: 100% !important;
+  }
+  .score-details {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .score-component {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .score-component {
     width: 60%;
   }
 }
 
-@media (max-width: 1024px) {
-  .summary-component {
-    width: 70%;
-  }
-}
-
-@media (max-width: 900px) {
-  .score-circle {
-    width: 10rem;
-    height: 10rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .summary-component {
-    width: 80%;
-    margin-top: 16rem;
-  }
-
-  .score-circle {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 425px) {
-  .summary-component {
-    width: 100%;
+@media (min-width: 1439px) {
+  .score-component {
+    width: 50%;
   }
 }
